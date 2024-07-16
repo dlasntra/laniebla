@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://b31n3halds0bj"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_0gi4r"]
+[ext_resource type="FontFile" uid="uid://bqrsike2gy4tp" path="res://Fuentes/Rotulos/MuseoModerno-Black.ttf" id="2_cfn3l"]
+[ext_resource type="FontFile" uid="uid://cai35cjx3jhdp" path="res://Fuentes/Diálogos/SCHLBKB.TTF" id="3_e318s"]
+[ext_resource type="FontFile" uid="uid://fh7buoew3jeh" path="res://Fuentes/Diálogos/SCHLBKI.TTF" id="4_ci3ge"]
+[ext_resource type="AudioStream" uid="uid://bksq3eploqks7" path="res://Música/Menu principal.wav" id="5_p8nx5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clq7n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ttr1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pwob1"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_0gi4r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.282196, 0.0764874, 0.166594, 1)
+
+[node name="Título" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = -221.0
+offset_right = -149.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_cfn3l")
+theme_override_font_sizes/font_size = 75
+text = "LA NIEBLA"
+horizontal_alignment = 1
+
+[node name="Jugar" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = -101.0
+offset_right = -458.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_e318s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_clq7n")
+text = "Jugar"
+flat = true
+
+[node name="Opciones" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = -40.0
+offset_right = -414.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_e318s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ttr1")
+text = "Opciones"
+flat = true
+
+[node name="Salir" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = 23.0
+offset_right = -458.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_e318s")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pwob1")
+text = "Salir"
+flat = true
+
+[node name="Derechos" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -247.5
+offset_top = -40.0
+offset_right = 247.5
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_ci3ge")
+text = "©2024 — Conejo de la Siniestra. Todos los derechos reservados."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p8nx5")
+autoplay = true
+
+[connection signal="pressed" from="Jugar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

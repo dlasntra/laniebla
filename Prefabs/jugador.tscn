@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://5a8fcfj1mh0v"]
+
+[ext_resource type="Script" path="res://Scripts/Scripts Prefab/jugador.gd" id="1_mwcxq"]
+[ext_resource type="Script" path="res://Prefabs/RayCast3D.gd" id="3_4vjvq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_35iov"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mtsvf"]
+
+[node name="Jugador" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_mwcxq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_35iov")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_mtsvf")
+
+[node name="Cabeza" type="Node3D" parent="CharacterBody3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Cabeza"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.661058, -0.236549)
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Cabeza"]
+transform = Transform3D(1, 0, 0, 0, -1.63918e-07, -1, 0, 3.75, -4.37114e-08, -0.036017, 0.663719, -0.401764)
+script = ExtResource("3_4vjvq")
+
+[node name="GUI" type="CanvasLayer" parent="CharacterBody3D/Cabeza/RayCast3D"]
+
+[node name="Cursor" type="Label" parent="CharacterBody3D/Cabeza/RayCast3D/GUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Accion" type="Label" parent="CharacterBody3D/Cabeza/RayCast3D/GUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -11.5
+offset_right = 113.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Presiona \"E\" para interactuar"
+horizontal_alignment = 1

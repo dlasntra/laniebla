@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca2fpb24hksau"]
+
+[ext_resource type="Script" path="res://Pantalla de carga/pantalla_de_carga.gd" id="1_5b8kc"]
+[ext_resource type="StyleBox" uid="uid://756qrepn6qbu" path="res://Pantalla de carga/progressbar_color.tres" id="2_bxbib"]
+[ext_resource type="FontFile" uid="uid://b36ouaahpbvq6" path="res://Fuentes/Rotulos/MuseoModerno-Medium.ttf" id="2_ef4ak"]
+
+[node name="load" type="CanvasLayer"]
+script = ExtResource("1_5b8kc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/fill = ExtResource("2_bxbib")
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.5
+offset_right = 37.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ef4ak")
+theme_override_font_sizes/font_size = 25
+text = "Cargando"
+horizontal_alignment = 1
