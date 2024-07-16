@@ -148,7 +148,6 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 
 - Se le ha asignado al objeto de **progressbar**.
 
-<<<<<<< HEAD
 - El color asignado a sido el blanco
 	- Hexadecimal: #FFFFFF.
 
@@ -159,7 +158,3 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 3. Se ha predispuesto el archivo "Menú Principal.wav" como cabecera de música de la escena menú.
 4. Se ha modificado la propiedad de importación del archivo "Menú principal.wav" en ```bucle```.
 5. Se ha eliminado el borde blanco de los botones de la escena menú.
-=======
-- El color asignado a sido el blanco.
-	- Hexadecimal: #FFFFFF.
->>>>>>> 1bc1638b72fd04d7dbf8d2c5269ce6d88539e82d
