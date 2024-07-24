@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b31n3halds0bj"]
+[gd_scene load_steps=10 format=3 uid="uid://b31n3halds0bj"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_0gi4r"]
 [ext_resource type="FontFile" uid="uid://bqrsike2gy4tp" path="res://Fuentes/Rotulos/MuseoModerno-Black.ttf" id="2_cfn3l"]
 [ext_resource type="FontFile" uid="uid://cai35cjx3jhdp" path="res://Fuentes/Diálogos/SCHLBKB.TTF" id="3_e318s"]
 [ext_resource type="FontFile" uid="uid://fh7buoew3jeh" path="res://Fuentes/Diálogos/SCHLBKI.TTF" id="4_ci3ge"]
 [ext_resource type="AudioStream" uid="uid://bksq3eploqks7" path="res://Música/Menu principal.wav" id="5_p8nx5"]
+[ext_resource type="VideoStream" path="res://Menu/menu-fondo-animado.ogv" id="6_qh6kp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clq7n"]
 
@@ -15,13 +16,16 @@
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_0gi4r")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.282196, 0.0764874, 0.166594, 1)
+stream = ExtResource("6_qh6kp")
+autoplay = true
+expand = true
+loop = true
 
 [node name="Título" type="Label" parent="."]
 anchors_preset = 8
@@ -54,6 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 focus_mode = 0
+theme_override_colors/font_color = Color(0.503769, 0.503769, 0.503768, 1)
 theme_override_constants/outline_size = 0
 theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_e318s")
@@ -75,6 +80,7 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
 theme_override_fonts/font = ExtResource("3_e318s")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5ttr1")
@@ -93,6 +99,7 @@ offset_right = -458.0
 offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
 theme_override_fonts/font = ExtResource("3_e318s")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pwob1")

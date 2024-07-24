@@ -158,3 +158,14 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 3. Se ha predispuesto el archivo "Menú Principal.wav" como cabecera de música de la escena menú.
 4. Se ha modificado la propiedad de importación del archivo "Menú principal.wav" en ```bucle```.
 5. Se ha eliminado el borde blanco de los botones de la escena menú.
+
+### Entradilla - 24 de Julio de 2024
+
+1. Creada la carpeta de menú.
+2. Añadida en la carpeta menú el archivo "menu-fondo-animado.ogv".
+3. Eliminación del ColorRect de la escena menú.
+4. Creación de VideoStreamPlayer.
+5. Adjuntado como vídeo de reproducción al VideoStreamPlayer el archivo _menu-fondo-animado.ogv_
+6. Activadas las opciones de ```autoplay``` y ```loop``` en el **VideoStreamPlayer**.
+7. Modificación del color del texto del menú: Cambiado a gris oscuro.
+	7.1. Hex: #808080.
