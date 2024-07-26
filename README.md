@@ -151,7 +151,9 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 - El color asignado a sido el blanco
 	- Hexadecimal: #FFFFFF.
 
-### Entradilla - 16 de Julio de 2024
+### Entradilla - 16 de Julio de 2024[^1]
+
+[^1]: Las entradillas son un formato menor a las entradas para indicar cambios menores en el proyecto.
 
 1. Se han creado las carpetas de Música y SFX.
 2. Se ha insertado los archivos "Menú Principal.wav" y "Música Radio.wav" en la carpeta de Música.
