@@ -1,7 +1,5 @@
 # DIARIO DE DESARROLLO
 
-
-<a id="e1"></a>
 ## Primera Entrada
 
 - Se ha cambiado la visibilidad de público a privado.
