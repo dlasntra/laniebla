@@ -170,4 +170,5 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 5. Adjuntado como vídeo de reproducción al VideoStreamPlayer el archivo _menu-fondo-animado.ogv_
 6. Activadas las opciones de ```autoplay``` y ```loop``` en el **VideoStreamPlayer**.
 7. Modificación del color del texto del menú: Cambiado a gris oscuro.
-	1. Hex: #808080.
+	1. Hex: #808080.[^1]
+[^1]: Los colores se representarán en el **DIARIO DE DESARROLLO** en formato hexadecimal, para una fácil implementación en el motor gráfico.
