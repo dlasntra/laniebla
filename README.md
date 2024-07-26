@@ -1,5 +1,7 @@
 # DIARIO DE DESARROLLO
 
+[TOC]
+
 ## Primera Entrada
 
 - Se ha cambiado la visibilidad de público a privado.
