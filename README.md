@@ -1,5 +1,7 @@
 # DIARIO DE DESARROLLO
 
+> En el _DIARIO DE DESARROLLO_ se incluirán todos los cambios efectuados en el código del juego a manera de cronograma y apuntes para el uso de mecánicas en el desarrollo del mismo.
+
 ## Primera Entrada
 
 - Se ha cambiado la visibilidad de público a privado.
