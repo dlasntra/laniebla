@@ -174,3 +174,27 @@ get_tree().change_scene_to_packed(Globals.loading_screen)
 7. Modificación del color del texto del menú: Cambiado a gris oscuro.
 	1. Hex: #808080.[^2]
 [^2]: Los colores se representarán en el **DIARIO DE DESARROLLO** en formato hexadecimal, para una fácil implementación en el motor gráfico.
+
+## Séptima Entrada
+
+1. Introducidas las entradas para las acciones de: adelante, atrás, izquierda, derecha, salto y acción con mando.
+	1. Adelante: Joystick Izquierdo - Arriba.
+	2. Atrás: Joystick Izquierdo - Abajo.
+	3. Izquierda: Joystick Izquierdo - Izquierda.
+	4. Derecha: Joystick Izquierdo - Derecha.
+	5. Salto: Cuadrado.
+	6. Acción: Cruz.
+
+2. Cambiada la acción del script **jugador[^3]** de "ui_accept" a la acción saltar para la compatibilidad con mando.
+	1. Antes:
+	```gdscript
+		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+	```
+	2. Después:
+	```gdscript
+		if Input.is_action_just_pressed("Saltar") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
+	```
+
+[^3]: Línea 32 y 33 del script de *jugador*.
